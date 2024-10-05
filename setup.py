@@ -4,6 +4,7 @@ import os
 from setuptools import setup, find_packages
 
 
+
 def get_version():
     filepath = os.path.join(
         os.path.dirname(__file__), 'cnn_finetune', '__init__.py'
