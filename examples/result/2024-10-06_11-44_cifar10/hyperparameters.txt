@@ -1,0 +1,18 @@
+batch_size: 32
+learning_rate: 0.01
+epochs: 2
+optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: None
+    initial_lr: 0.01
+    lr: 0.009506249999999999
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+)
+loss_fn: CrossEntropyLoss()
+scheduler: <torch.optim.lr_scheduler.StepLR object at 0x79a7b553f140>

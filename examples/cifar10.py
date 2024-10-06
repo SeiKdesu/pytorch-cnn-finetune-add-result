@@ -149,6 +149,7 @@ def main():
         # 結果の保存
     folder_name = 'cifar10'
     utils.save(folder_name, logger, model, device,  hyperparams={
+        'model_name':args.model_name,
         'batch_size': args.batch_size,
         'learning_rate': args.lr,
         'epochs': args.epochs,
