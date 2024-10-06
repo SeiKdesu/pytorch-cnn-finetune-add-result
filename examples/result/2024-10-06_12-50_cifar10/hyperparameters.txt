@@ -1,0 +1,19 @@
+model_name: resnet50
+batch_size: 32
+learning_rate: 0.01
+epochs: 20
+optimizer: SGD (
+Parameter Group 0
+    dampening: 0
+    differentiable: False
+    foreach: None
+    fused: None
+    initial_lr: 0.01
+    lr: 0.006026876802191002
+    maximize: False
+    momentum: 0.9
+    nesterov: False
+    weight_decay: 0
+)
+loss_fn: CrossEntropyLoss()
+scheduler: <torch.optim.lr_scheduler.StepLR object at 0x793d0ba15f40>
