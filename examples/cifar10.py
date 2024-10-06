@@ -100,11 +100,11 @@ def main():
     if model_name == 'alexnet':
         raise ValueError('The input size of the CIFAR-10 data set (32x32) is too small for AlexNet')
 
-    classes = (
-        'plane', 'car', 'bird', 'cat', 'deer',
-        'dog', 'frog', 'horse', 'ship', 'truck'
-    )
-
+    # classes = (
+    #     'plane', 'car', 'bird', 'cat', 'deer',
+    #     'dog', 'frog', 'horse', 'ship', 'truck'
+    # )
+    classes = [f'class{i}' for i in range(100)] 
     model = make_model(
         model_name,
         pretrained=True,
@@ -121,13 +121,13 @@ def main():
             std=model.original_model_info.std),
     ])
 
-    train_set = torchvision.datasets.CIFAR10(
+    train_set = torchvision.datasets.CIFAR100(
         root='./data', train=True, download=True, transform=transform
     )
     train_loader = torch.utils.data.DataLoader(
         train_set, batch_size=args.batch_size, shuffle=True, num_workers=2
     )
-    test_set = torchvision.datasets.CIFAR10(
+    test_set = torchvision.datasets.CIFAR100(
         root='./data', train=False, download=True, transform=transform
     )
     test_loader = torch.utils.data.DataLoader(
