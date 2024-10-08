@@ -107,7 +107,7 @@ def main():
     classes = [f'class{i}' for i in range(100)] 
     model = make_model(
         model_name,
-        pretrained=True,
+        pretrained=False,
         num_classes=len(classes),
         dropout_p=args.dropout_p,
         input_size=(32, 32) if model_name.startswith(('vgg', 'squeezenet')) else None,
