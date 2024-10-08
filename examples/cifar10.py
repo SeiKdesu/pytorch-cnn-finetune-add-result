@@ -147,7 +147,7 @@ def main():
         test_loss , test_accuracy = test(model, test_loader)
         logger.record(epoch, train_loss, test_loss,train_accuracy, test_accuracy)
         # 結果の保存
-    folder_name = 'cifar10'
+    folder_name = 'cifar100'
     utils.save(folder_name, logger, model, device,  hyperparams={
         'model_name':args.model_name,
         'batch_size': args.batch_size,
